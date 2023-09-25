@@ -1,0 +1,16 @@
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        // Implement your authentication logic here, e.g., check the username and password against a predefined value.
+        if ("your_username".equals(username) && "your_password".equals(password)) {
+            // Authentication successful, redirect to the Student CRUD Servlet
+            response.sendRedirect(request.getContextPath() + "/student");
+        } else {
+            // Authentication failed, redirect to the forget password page
+            response.sendRedirect(request.getContextPath() + "/forget-password");
+        }
+    }
+}
