@@ -1,0 +1,4 @@
+@WebServlet("/student")
+public class StudentServlet extends HttpServlet {
+    // Handle CRUD operations using Hibernate.
+}
